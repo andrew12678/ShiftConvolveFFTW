@@ -3,7 +3,6 @@
 \docType{package}
 \name{package1}
 \alias{package1}
-\alias{package1-package}
 \title{FFTCONV Package}
 \description{
 Testing out the FFTCONV
