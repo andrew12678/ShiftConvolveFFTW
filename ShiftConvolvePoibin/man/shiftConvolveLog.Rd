@@ -4,12 +4,14 @@
 \alias{shiftConvolveLog}
 \title{shiftConvolveLog}
 \usage{
-shiftConvolveLog(p, S0)
+shiftConvolveLog(p, S0 = 0, process = TRUE)
 }
 \arguments{
 \item{p}{Accepts a list of probabilities}
 
-\item{S0}{An observed value}
+\item{S0}{An observed value, default set to 0}
+
+\item{process}{Whether we want to process for 0s and 1s, always set to TRUE unless called from shiftpval}
 }
 \value{
 The final probability mass function from the convolution
