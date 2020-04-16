@@ -1,0 +1,2 @@
+PKG_LIBS =  -L"$(LIB_FFTW)/" -lfftw3-3 -L..inst/include/x64
+PKG_CPPFLAGS = -I"$(LIB_FFTW)/" -I../inst/include
