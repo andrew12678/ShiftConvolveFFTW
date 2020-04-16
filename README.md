@@ -15,7 +15,7 @@ We have successfully installed `ShiftConvolveFFTW` on `Windows 10: Professional 
 
 As eluded to above, `FFTW` will be a necessary dependency. 
 
-### Linux/macOS
+### Linux
 
 This package was originally compiled in an `Ubuntu 18.04` Linux operating system using `R 3.5.1` and `FFTW 3.3.5` but was later recompiled (without any modification of the configurations) in a `Manjaro 19.02 KDE Plasma` Linux operating system with inbuilt `FFTW 3.3.8` and `R 3.6.3`. 
 Since the `FFTW` came along with the `Manjaro` installation, we will only outline installations on the `Ubuntu` and `macOS` system which does not automatically install `FFTW`.
@@ -32,6 +32,39 @@ sudo make install
 ```
 
 Since the `Manjaro` distribution came with `FFTW 3.3.8`, later versions of `FFTW` should be able to be installed as well.
+
+### macOS
+
+FFTW should be first installed in the same manner as the Linux distributions with the `macOS` terminal. For emphasis we repeat it below.
+
+```console
+wget http://fftw.org/fftw-3.3.5.tar.gz
+tar -xzf fftw-3.3.5.tar.gz
+cd fftw-3.3.5
+./configure --enable-shared
+make
+sudo make install
+```
+
+To use `wget`, the user may have to install [Homebrew](https://brew.sh/), which can be installed with the following command. 
+
+```console
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+To avoid a further `pkg-config` error later down the track, we shall install it with `brew`
+
+```console
+brew install pkg-config
+```
+
+If the above throws an error then it should prompt you make the following 2 changes and then try the installation again.
+
+```console
+sudo chown -R $(whoami) /usr/local/lib/pkgconfig /usr/local/share/info
+chmod u+w /usr/local/lib/pkgconfig /usr/local/share/info
+brew install pkg-config
+```
 
 ### Windows
 
