@@ -22,7 +22,7 @@ Since the `FFTW` came along with the `Manjaro` installation, we will only outlin
 
 For `Ubuntu` the steps included:
 
-```console
+```bash
 wget http://fftw.org/fftw-3.3.5.tar.gz
 tar -xzf fftw-3.3.5.tar.gz
 cd fftw-3.3.5
@@ -37,7 +37,7 @@ Since the `Manjaro` distribution came with `FFTW 3.3.8`, later versions of `FFTW
 
 FFTW should be first installed in the same manner as the Linux distributions with the `macOS` terminal. For emphasis we repeat it below.
 
-```console
+```bash
 wget http://fftw.org/fftw-3.3.5.tar.gz
 tar -xzf fftw-3.3.5.tar.gz
 cd fftw-3.3.5
@@ -48,19 +48,19 @@ sudo make install
 
 To use `wget`, the user may have to install [Homebrew](https://brew.sh/), which can be installed with the following command. 
 
-```console
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 To avoid a further `pkg-config` error later down the track, we shall install it with `brew`
 
-```console
+```bash
 brew install pkg-config
 ```
 
 If the above throws an error then it should prompt you make the following 2 changes and then try the installation again.
 
-```console
+```bash
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig /usr/local/share/info
 chmod u+w /usr/local/lib/pkgconfig /usr/local/share/info
 brew install pkg-config
@@ -102,7 +102,7 @@ That should conclude all the installation of `FFTW` dependencies on Windows.
 
 Alternatively, one could attempt to build `FFTW` from source using `MinGW` as outlined on [http://www.fftw.org/install/windows.html](http://www.fftw.org/install/windows.html) using the commands in the `MinGW` terminal in the directory of the zip file downloaded earlier:
 
-````console
+````bash
 ./configure --with-our-malloc16 --with-windows-f77-mangling --enable-shared --disable-static --enable-threads --with-combined-threads --enable-portable-binary --enable-sse2 --with-incoming-stack-boundary=2
 make
 make install
@@ -114,7 +114,7 @@ However, we have not (and do not intend to) try this.
 
 The most simple installation involves simply cloning this repository and installing `ShiftConvolveFFTW` from source. 
 
-```console
+```bash
 git clone https://github.com/andrew12678/ShiftConvolveFFTW.git
 cd ShiftConvolveFFTW
 # After opening up R or Rstudio in the ShiftConvolveFFTW directory
