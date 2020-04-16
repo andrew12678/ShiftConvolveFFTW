@@ -72,7 +72,7 @@ Alternatively, one could attempt to build `FFTW` from source using `MinGW` as ou
 ````console
 ./configure --with-our-malloc16 --with-windows-f77-mangling --enable-shared --disable-static --enable-threads --with-combined-threads --enable-portable-binary --enable-sse2 --with-incoming-stack-boundary=2
 make
-make instal
+make install
 ````
 
 However, we have not (and do not intend to) try this.
