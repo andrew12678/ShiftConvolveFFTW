@@ -118,7 +118,7 @@ The most simple installation involves simply cloning this repository and install
 git clone https://github.com/andrew12678/ShiftConvolveFFTW.git
 cd ShiftConvolveFFTW
 # After opening up R or Rstudio in the ShiftConvolveFFTW directory
-install.packages('ShiftConvolvePoibin_1.16.0.tar.gz', repos = NULL, type="source")
+install.packages('ShiftConvolvePoibin_1.17.0.tar.gz', repos = NULL, type="source")
 ```
 
 An alternative installation procedure involves cloning the repository, creating a `RStudio` project in the `ShiftConvolvePoibin` folder and then building. 
