@@ -112,16 +112,14 @@ However, we have not (and do not intend to) try this.
 
 ## Installation
 
-The most simple installation involves simply cloning this repository and installing `ShiftConvolveFFTW` from source. 
+The most simple installation involves installing `devtools` in R and using the `install_github()` function.
 
-```bash
-git clone https://github.com/andrew12678/ShiftConvolveFFTW.git
-cd ShiftConvolveFFTW
-# After opening up R or Rstudio in the ShiftConvolveFFTW directory
-install.packages('ShiftConvolvePoibin_1.17.0.tar.gz', repos = NULL, type="source")
+```R
+install.packages('devtools') # If you have not installed devtools
+devtools::install_github('https://github.com/andrew12678/ShiftConvolveFFTW.git')
 ```
 
-An alternative installation procedure involves cloning the repository, creating a `RStudio` project in the `ShiftConvolvePoibin` folder and then building. 
+An alternative installation procedure involves cloning the repository, creating a `RStudio` project and then building. 
 
 ## Examples
 
@@ -130,11 +128,14 @@ An simple example with the uniform distribution
 ```R
 library(ShiftConvolvePoibin)
 set.seed(18)
-n = 10000
-p = runif(n)
-s0 = 5200
-shiftpval(p, s0)	# compute the p-value, or right tail at s0
-shiftpval(1-p, n-s0)	# compute the p-value, or left tail at s0
+n=1000
+probs <- runif(n)
+x <- c(200, 500, 800)
+p <- seq(0, 1, 0.01)
+dpoisbin(x,probs,method="ShiftConvolve",log.p=FALSE)
+ppoisbin(x,probs,method="ShiftConvolve",lower.tail=FALSE,log.p=TRUE)
+qpoisbin(p,probs,method="ShiftConvolve",lower.tail=TRUE,log.p=FALSE)
+rpoisbin(n,probs)
 ```
 
 ## References
