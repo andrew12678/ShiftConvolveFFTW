@@ -1,8 +1,6 @@
 Package: ShiftConvolvePoibin
 Type: Package
-Title: Calculates the p-value for a Poisson Binomial distribution using
-        exponential shifting and Fast Fourier Transformations using
-        FFTW.
+Title: Calculates the p-Value for a Poisson Binomial Distribution using Exponential Shifting and Fast Fourier Transformations
 Version: 1.17.0
 Author: Andrew Ray Lee, Noah Peres and Uri Keich
 Maintainer: Andrew Ray Lee <andrewl@maths.usyd.edu.au>
