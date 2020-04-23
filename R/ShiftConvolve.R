@@ -34,6 +34,11 @@
 #'                   (if \code{TRUE}; default) or \eqn{P[X > x]} (if
 #'                   \code{FALSE}).
 #'
+#'@return
+#'\code{dpoisbin} gives the density, \code{ppoisbin} computes the distribution
+#'function, \code{qpoisbin} gives the quantile function and \code{rpoisbin}
+#'generates random deviates.
+#'
 #' @examples
 #' set.seed(18)
 #' n <- 1000
